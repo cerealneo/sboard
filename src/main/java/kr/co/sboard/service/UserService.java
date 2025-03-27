@@ -3,6 +3,7 @@ package kr.co.sboard.service;
 import jakarta.mail.Message;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;
+import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 import kr.co.sboard.dto.UserDTO;
 import kr.co.sboard.entity.User;
@@ -27,10 +28,10 @@ public class UserService {
     private final PasswordEncoder passwordEncoder;
     private final JavaMailSender mailSender;
 
-    private final HttpSession session;
+
+    private final HttpServletRequest request;
 
     public void register(UserDTO userDTO){
-
         // 비밀번호 암호화
         String encodedPass = passwordEncoder.encode(userDTO.getPass());
         userDTO.setPass(encodedPass);
@@ -57,16 +58,16 @@ public class UserService {
                 String code = sendEmailCode(value);
 
                 // 인증코드 비교를 하기 위해서 세션 저장
+                HttpSession session = request.getSession();
                 session.setAttribute("authCode", code);
             }
-
 
         }else if(type.equals("hp")){
             count = userRepository.countByHp(value);
         }
         return count;
-
     }
+
 
     @Value("${spring.mail.username}")
     private String sender;
@@ -96,6 +97,4 @@ public class UserService {
         }
         return String.valueOf(code);
     }
-
-
 }
