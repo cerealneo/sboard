@@ -2,6 +2,7 @@ package kr.co.sboard.service;
 
 import kr.co.sboard.dto.ArticleDTO;
 import kr.co.sboard.dto.FileDTO;
+import kr.co.sboard.entity.File;
 import kr.co.sboard.repository.FileRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,12 +30,10 @@ public class FileService {
         fileRepository.save(file);
     }
 
-
     @Value("${spring.servlet.multipart.location}")
     private String uploadDir;
 
     public List<FileDTO> uploadFile(ArticleDTO articleDTO) {
-
         // 파일 업로드 디렉터리 객체 생성
         java.io.File fileUploadDir = new java.io.File(uploadDir);
 
@@ -45,7 +44,6 @@ public class FileService {
 
         // 파일 업로드 디렉터리 시스템 경로 구하기
         String fileUploadPath = fileUploadDir.getAbsolutePath();
-
         log.info("fileUploadPath : {}", fileUploadPath);
 
         // 파일 정보 객체 가져오기
@@ -80,9 +78,6 @@ public class FileService {
             }
         }
         return fileDTOList;
-
-
-
     }
 
     public void downloadFile(){
