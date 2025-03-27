@@ -8,13 +8,24 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.core.io.Resource;
+import org.springframework.http.ContentDisposition;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
@@ -28,6 +39,20 @@ public class FileService {
     public void save(FileDTO fileDTO) {
         File file = modelMapper.map(fileDTO, File.class);
         fileRepository.save(file);
+    }
+
+    public FileDTO findById(int fno){
+        Optional<File> optFile = fileRepository.findById(fno);
+
+        if(optFile.isPresent()){
+
+            File file = optFile.get();
+
+            FileDTO fileDTO = modelMapper.map(file, FileDTO.class);
+
+            return fileDTO;
+        }
+        return null;
     }
 
     @Value("${spring.servlet.multipart.location}")
@@ -80,7 +105,28 @@ public class FileService {
         return fileDTOList;
     }
 
-    public void downloadFile(){
+    public Resource downloadFile(FileDTO fileDTO){
+
+        try{
+            // 파일 패스 정보객체 생성
+            Path path = Paths.get(uploadDir + java.io.File.separator + fileDTO.getSName());
+
+            // 파일 컨텐츠 타입 확인
+            String contentType = Files.probeContentType(path);
+            fileDTO.setContentType(contentType);
+
+            // 파일 다운로드 스트림 작업으로 파일 자원 객체 생성
+            Resource resource = new InputStreamResource(Files.newInputStream(path));
+
+            return resource;
+
+        }catch (Exception e){
+            log.error(e.getMessage());
+        }
+        return null;
+    }
+
+    public void deleteFile(){
 
     }
 

@@ -26,3 +26,31 @@
 2025-03-27T12:07:45.389+09:00  INFO 9004 --- [sboard] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-03-27T12:07:45.391+09:00  INFO 9004 --- [sboard] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-03-27T12:07:45.520+09:00  INFO 9004 --- [sboard] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-27T15:14:10.818+09:00  INFO 17576 --- [sboard] [Test worker] kr.co.sboard.SboardApplicationTests      : Starting SboardApplicationTests v0.0.5-SNAPSHOT using Java 17.0.12 with PID 17576 (started by lotte06 in C:\Users\lotte06\Desktop\workspace\sboard)
+2025-03-27T15:14:10.820+09:00  INFO 17576 --- [sboard] [Test worker] kr.co.sboard.SboardApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2025-03-27T15:14:11.579+09:00  INFO 17576 --- [sboard] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-27T15:14:11.652+09:00  INFO 17576 --- [sboard] [Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 4 JPA repository interfaces.
+2025-03-27T15:14:12.205+09:00  INFO 17576 --- [sboard] [Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-27T15:14:12.263+09:00  INFO 17576 --- [sboard] [Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-03-27T15:14:12.302+09:00  INFO 17576 --- [sboard] [Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-27T15:14:12.640+09:00  INFO 17576 --- [sboard] [Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-27T15:14:12.683+09:00  INFO 17576 --- [sboard] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-27T15:14:13.114+09:00  INFO 17576 --- [sboard] [Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31204303
+2025-03-27T15:14:13.116+09:00  INFO 17576 --- [sboard] [Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-27T15:14:13.186+09:00  WARN 17576 --- [sboard] [Test worker] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-27T15:14:13.209+09:00  INFO 17576 --- [sboard] [Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-27T15:14:14.206+09:00  INFO 17576 --- [sboard] [Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-27T15:14:14.209+09:00  INFO 17576 --- [sboard] [Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-27T15:14:15.082+09:00  WARN 17576 --- [sboard] [Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-27T15:14:15.133+09:00  INFO 17576 --- [sboard] [Test worker] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-03-27T15:14:15.969+09:00  INFO 17576 --- [sboard] [Test worker] kr.co.sboard.SboardApplicationTests      : Started SboardApplicationTests in 5.477 seconds (process running for 6.626)
+2025-03-27T15:14:16.483+09:00  INFO 17576 --- [sboard] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-27T15:14:16.486+09:00  INFO 17576 --- [sboard] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-27T15:14:16.617+09:00  INFO 17576 --- [sboard] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
