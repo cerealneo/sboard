@@ -1,0 +1,39 @@
+2025-04-07T17:23:42.374+09:00  INFO 16736 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Starting SboardApplication v0.0.7-SNAPSHOT using Java 17.0.12 with PID 16736 (C:\Users\lotte06\Desktop\workspace\sboard\build\classes\java\main started by lotte06 in C:\Users\lotte06\Desktop\workspace\sboard)
+2025-04-07T17:23:42.376+09:00  INFO 16736 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : No active profile set, falling back to 1 default profile: "default"
+2025-04-07T17:23:42.417+09:00  INFO 16736 --- [sboard] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-07T17:23:42.418+09:00  INFO 16736 --- [sboard] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-07T17:23:43.090+09:00  INFO 16736 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-07T17:23:43.155+09:00  INFO 16736 --- [sboard] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 5 JPA repository interfaces.
+2025-04-07T17:23:43.709+09:00  INFO 16736 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-04-07T17:23:43.720+09:00  INFO 16736 --- [sboard] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-07T17:23:43.721+09:00  INFO 16736 --- [sboard] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-07T17:23:43.764+09:00  INFO 16736 --- [sboard] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-07T17:23:43.764+09:00  INFO 16736 --- [sboard] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1346 ms
+2025-04-07T17:23:43.906+09:00  INFO 16736 --- [sboard] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-07T17:23:43.954+09:00  INFO 16736 --- [sboard] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-07T17:23:43.986+09:00  INFO 16736 --- [sboard] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-04-07T17:23:44.246+09:00  INFO 16736 --- [sboard] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-07T17:23:44.273+09:00  INFO 16736 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-04-07T17:23:44.641+09:00  INFO 16736 --- [sboard] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4698f5f0
+2025-04-07T17:23:44.643+09:00  INFO 16736 --- [sboard] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-04-07T17:23:44.813+09:00  WARN 16736 --- [sboard] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-07T17:23:44.832+09:00  INFO 16736 --- [sboard] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.4
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-07T17:23:45.743+09:00  INFO 16736 --- [sboard] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-07T17:23:45.747+09:00  INFO 16736 --- [sboard] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07T17:23:46.437+09:00  WARN 16736 --- [sboard] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-07T17:23:46.475+09:00  INFO 16736 --- [sboard] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name myUserDetailsService
+2025-04-07T17:23:47.073+09:00  INFO 16736 --- [sboard] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-04-07T17:23:47.106+09:00  INFO 16736 --- [sboard] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-04-07T17:23:47.113+09:00  INFO 16736 --- [sboard] [restartedMain] kr.co.sboard.SboardApplication           : Started SboardApplication in 5.237 seconds (process running for 5.859)
+2025-04-07T17:23:54.171+09:00  INFO 16736 --- [sboard] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-07T17:23:54.272+09:00  INFO 16736 --- [sboard] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-04-07T17:23:54.275+09:00  INFO 16736 --- [sboard] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-07T17:23:54.278+09:00  INFO 16736 --- [sboard] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-04-07T17:23:54.380+09:00  INFO 16736 --- [sboard] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
